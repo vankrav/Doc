@@ -1,0 +1,66 @@
+\hypertarget{tetris_8h}{}\doxysection{Файл tetris.\+h}
+\label{tetris_8h}\index{tetris.h@{tetris.h}}
+
+
+Заголовочный файл с описанием логики игры  
+
+
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+\doxysubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_block}{Block}}
+\begin{DoxyCompactList}\small\item\em Структура для хранения фигуры \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_tetris}{Tetris}}
+\begin{DoxyCompactList}\small\item\em Класс с реализованной логикой тетриса. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{tetris_8h_a7bb5845dcf8072f09f0a8d246b47e032}\label{tetris_8h_a7bb5845dcf8072f09f0a8d246b47e032}} 
+\#define {\bfseries MAXX}~10
+\item 
+\mbox{\Hypertarget{tetris_8h_a25602e1c79852e5be195490eceff513f}\label{tetris_8h_a25602e1c79852e5be195490eceff513f}} 
+\#define {\bfseries MAXY}~12
+\item 
+\mbox{\Hypertarget{tetris_8h_a84627572861c86bc97a2657a230024ba}\label{tetris_8h_a84627572861c86bc97a2657a230024ba}} 
+\#define {\bfseries NEXTMAXX}~6
+\item 
+\mbox{\Hypertarget{tetris_8h_abc0bac6432279a95e02e8fcd7c7133dd}\label{tetris_8h_abc0bac6432279a95e02e8fcd7c7133dd}} 
+\#define {\bfseries NEXTMAXY}~6
+\item 
+\mbox{\Hypertarget{tetris_8h_a241aeeb764887ae5e3de58b98f04b16d}\label{tetris_8h_a241aeeb764887ae5e3de58b98f04b16d}} 
+\#define {\bfseries WIDTH}~50
+\item 
+\mbox{\Hypertarget{tetris_8h_aed89bd71aee8be823e8a20ec4e093c1e}\label{tetris_8h_aed89bd71aee8be823e8a20ec4e093c1e}} 
+\#define {\bfseries HEIGHT}~50
+\item 
+\mbox{\Hypertarget{tetris_8h_aa0077c92efe16cc4dfbe02bb6dcc2771}\label{tetris_8h_aa0077c92efe16cc4dfbe02bb6dcc2771}} 
+\#define {\bfseries NEXTWIDTH}~30
+\item 
+\mbox{\Hypertarget{tetris_8h_af63fbc107fc7b8eb4ff30e1450ac70d5}\label{tetris_8h_af63fbc107fc7b8eb4ff30e1450ac70d5}} 
+\#define {\bfseries NEXTHEIGHT}~30
+\item 
+\mbox{\Hypertarget{tetris_8h_ab39fec97d85960796efedec442f38004}\label{tetris_8h_ab39fec97d85960796efedec442f38004}} 
+\#define {\bfseries INTERVAL}~0
+\item 
+\mbox{\Hypertarget{tetris_8h_a698c124f1c293f98840449d6c5b9d984}\label{tetris_8h_a698c124f1c293f98840449d6c5b9d984}} 
+\#define {\bfseries COUNT}~4
+\item 
+\mbox{\Hypertarget{tetris_8h_a5257bffe4714645f0a391fa4926d01af}\label{tetris_8h_a5257bffe4714645f0a391fa4926d01af}} 
+\#define {\bfseries PATH\+\_\+\+TO\+\_\+\+WALL}~\char`\"{}\+:/src/img/okno/okno\char`\"{}
+\item 
+\mbox{\Hypertarget{tetris_8h_a1d860c39b64a37772936563f39353a83}\label{tetris_8h_a1d860c39b64a37772936563f39353a83}} 
+\#define {\bfseries PATH\+\_\+\+TO\+\_\+\+SKY\+\_\+\+IMG}~\char`\"{}\+:/src/img/sky/sky.\+jpg\char`\"{}
+\item 
+\mbox{\Hypertarget{tetris_8h_a4e03eed5c8eae13c744905c61938944d}\label{tetris_8h_a4e03eed5c8eae13c744905c61938944d}} 
+\#define {\bfseries PATH\+\_\+\+TO\+\_\+\+BOMB\+\_\+\+IMG}~\char`\"{}\+:/src/img/bomb/bomb.\+png\char`\"{}
+\item 
+\mbox{\Hypertarget{tetris_8h_aac3553b3932cbfeeac4526ce7ca0336b}\label{tetris_8h_aac3553b3932cbfeeac4526ce7ca0336b}} 
+\#define {\bfseries SPEED}~500
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Заголовочный файл с описанием логики игры 
+

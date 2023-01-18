@@ -1,0 +1,109 @@
+\hypertarget{tetris_8h_source}{}\doxysection{tetris.\+h}
+\mbox{\hyperlink{tetris_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ TETRIS\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ TETRIS\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <cstdlib>}\ \textcolor{comment}{//\ для\ случайных\ чисел\ подключаем}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ MAXX\ 10\ }\textcolor{comment}{//\ количество\ блоков\ в\ ширину}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MAXY\ 12\ }\textcolor{comment}{//\ количество\ блоков\ в\ длину}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ NEXTMAXX\ 6\ }\textcolor{comment}{//\ количество\ блоков\ в\ ширину\ в\ окне\ "{}далее"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ NEXTMAXY\ 6\ }\textcolor{comment}{//\ количество\ блоков\ в\ длину\ в\ окне\ "{}далее"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ WIDTH\ 50\ }\textcolor{comment}{//\ ширина\ ячейки}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ HEIGHT\ 50\ }\textcolor{comment}{//\ высота\ ячейки}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ NEXTWIDTH\ 30\ }\textcolor{comment}{//\ ширина\ ячейки}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ NEXTHEIGHT\ 30\ }\textcolor{comment}{//\ высота\ ячейки}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ INTERVAL\ 0\ }\textcolor{comment}{//\ интервал\ между\ яцейками}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ COUNT\ 4\ }\textcolor{comment}{//\ количество\ блоков\ формирующих\ сторону\ общего\ для\ всех\ фигур\ блока}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ PATH\_TO\_WALL\ "{}:/src/img/okno/okno"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ PATH\_TO\_SKY\_IMG\ "{}:/src/img/sky/sky.jpg"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ PATH\_TO\_BOMB\_IMG\ "{}:/src/img/bomb/bomb.png"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ SPEED\ 500}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{comment}{//\ структура\ для\ общего\ блока,\ блок\ состоит\ из\ боксов\ (ячеек),\ в\ блоке\ находится\ фигура}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_block}{Block}}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_block_a7d2bb67ff3ba7e884d12ef34ebcd44a5}{x}}[COUNT];\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_block_a629800089eb828ad6e2b74732477ae63}{y}}[COUNT];\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_block_ae5b5fa0858f16fdfae3b4240d374ecde}{centerX}};\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_block_afbf8df0b6fccdeda5690bc287dba1e01}{centerY}};\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_block_a1fbbe7a8dd960915cb5a8c8f466037dd}{ID}};\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_block_a04bc5789d5afdafeace98772ab949ee8}{isBomb}}\ =\ \textcolor{keyword}{false};\ }
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_tetris}{Tetris}}\ \{}
+\DoxyCodeLine{00051\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_tetris_a0216a055ecb3568412c35fc78e52bf14}{Tetris}}();\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tetris_af1c7655c94f64ca926258b0aed2321bb}{createBlock}}();\ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{struct_block}{Block}}\ \mbox{\hyperlink{class_tetris_a43f21cd258ebcf354cae39aa8aee558c}{getNextBlock}}();\ }
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{struct_block}{Block}}\ \mbox{\hyperlink{class_tetris_aa45bd2fadefe2ec0375538712c4b8156}{getBlock}}();\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_tetris_aadbfdd96268577b77fe43a15417e2137}{getScore}}();\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_tetris_a132bbb23f66520e5ec84364892340886}{getSpeed}}();\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tetris_af171b28135eb41697fb6b038a27f64e5}{setSpeed}}(\textcolor{keywordtype}{int}\ s);\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_tetris_a99ab0f920df2f3603ea7e0323c9e6ae0}{bestScore}}(\textcolor{keywordtype}{int}\ score\ =\ 0);\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_tetris_aaf0baf002241f57f24addc44e9d03165}{getBox}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_tetris_acdcc2522d581b4c2aaf94c7418e46c15}{rotate}}();\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_tetris_a6fb6656dac6e3306a9e91d714b3ef2ec}{moveToLeft}}();\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_tetris_a2bcb5e76fb7411c36c7491e9f7559574}{moveToRight}}();\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_tetris_a78f8cb8bedaa24fa27cfc6b096cfa530}{moveToBottom}}();\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_tetris_a74d169c2be7d50c230cb68a29f1df51a}{isEnd}}();\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_tetris_a6c1a7ddeb8b0696fae32775698e46b30}{clear}}();\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_tetris_afe47b7ea2bfcb3a69afecb477445007d}{getWidth}}();\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_tetris_a5ab59c935e4329efab03f90d94e44114}{getHeight}}();\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_tetris_a309881e04c6d327373964059d672ad2d}{getNextWidth}}();\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_tetris_a4855d62e739d0ace2429c97353d08d66}{getNextHeight}}();\ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ createNextBlock();\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{bool}\ move(\textcolor{keywordtype}{int}\ dx,\ \textcolor{keywordtype}{int}\ dy);\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ blockToBox();\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{bool}\ isRotatable();\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{int}\ getFirstFullLine();\ }
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{int}\ speed;}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{int}\ score;\ \textcolor{comment}{//\ счет}}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{int}\ best;}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{bool}\ blockIsBomb;}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{struct_block}{Block}}\ block;\ \textcolor{comment}{//\ текущий\ блок}}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{struct_block}{Block}}\ nextBlock;\ \textcolor{comment}{//\ следующий\ блок}}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{int}\ box[MAXX][MAXY];\ \textcolor{comment}{//\ система\ координат\ сетки\ (1\ -\/\ есть,\ 0\ -\/\ нету)}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TETRIS\_H}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ }
+
+\end{DoxyCode}

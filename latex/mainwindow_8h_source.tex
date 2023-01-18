@@ -1,0 +1,88 @@
+\hypertarget{mainwindow_8h_source}{}\doxysection{mainwindow.\+h}
+\mbox{\hyperlink{mainwindow_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QPainter>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QEvent>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QPaintEvent>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QPen>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QBrush>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QColor>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QKeyEvent>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QTimer>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QGridLayout>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <QMessageBox>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <QScreen>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <QPixmap>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <QApplication>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tetris_8h}{tetris.h}}"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tetrisbox_8h}{tetrisbox.h}}"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{nexttetrisbox_8h}{nexttetrisbox.h}}"{}}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ STATUS\_ON\ 0\ }\textcolor{comment}{//\ игра\ идет}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ STATUS\_PAUSE\ 1\ }\textcolor{comment}{//пауза}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ STATUS\_OFF\ 2\ }\textcolor{comment}{//\ игра\ не\ начата}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ STATUS\_END\ 3\ }\textcolor{comment}{//\ игра\ кончилась}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_main_window}{\string~MainWindow}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a9c4f542263838b9ecd06eae839a42a34}{keyPressEvent}}(QKeyEvent\ *event);}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a5d4794d519b8ca06eacdd14e89cfc755}{changeEvent}}(QKeyEvent\ *event);\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ac433c09c359ac237755e2266c4e0f76c}{updateScore}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ onTimer();}
+\DoxyCodeLine{00051\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ status;}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_tetris}{Tetris}}\ tetris;}
+\DoxyCodeLine{00055\ \ \ \ \ QTimer\ *timer;}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_tetris_box}{TetrisBox}}\ *tetrisBox;}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_next_tetris_box}{NextTetrisBox}}\ *nextTetrisBox;}
+\DoxyCodeLine{00058\ \ \ \ \ QGridLayout\ *mainLayout;}
+\DoxyCodeLine{00059\ \ \ \ \ QLabel\ *scoreLabel;}
+\DoxyCodeLine{00060\ \ \ \ \ QLabel\ *aboutLabel;}
+\DoxyCodeLine{00061\ \ \ \ \ QLabel\ *nextLabel;}
+\DoxyCodeLine{00062\ \ \ \ \ QLabel\ *controlLabel;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \};}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ }
+
+\end{DoxyCode}

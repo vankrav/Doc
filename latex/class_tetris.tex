@@ -1,0 +1,115 @@
+\hypertarget{class_tetris}{}\doxysection{Класс Tetris}
+\label{class_tetris}\index{Tetris@{Tetris}}
+
+
+Класс с реализованной логикой тетриса.  
+
+
+
+
+{\ttfamily \#include $<$tetris.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tetris_a0216a055ecb3568412c35fc78e52bf14}{Tetris}} ()
+\begin{DoxyCompactList}\small\item\em конструктор \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tetris_af1c7655c94f64ca926258b0aed2321bb}{create\+Block}} ()
+\begin{DoxyCompactList}\small\item\em создать блок \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tetris_a43f21cd258ebcf354cae39aa8aee558c}\label{class_tetris_a43f21cd258ebcf354cae39aa8aee558c}} 
+\mbox{\hyperlink{struct_block}{Block}} {\bfseries get\+Next\+Block} ()
+\begin{DoxyCompactList}\small\item\em получить следующий блок \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tetris_aa45bd2fadefe2ec0375538712c4b8156}\label{class_tetris_aa45bd2fadefe2ec0375538712c4b8156}} 
+\mbox{\hyperlink{struct_block}{Block}} {\bfseries get\+Block} ()
+\begin{DoxyCompactList}\small\item\em получить блок \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tetris_aadbfdd96268577b77fe43a15417e2137}\label{class_tetris_aadbfdd96268577b77fe43a15417e2137}} 
+int {\bfseries get\+Score} ()
+\begin{DoxyCompactList}\small\item\em получить счет \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tetris_a132bbb23f66520e5ec84364892340886}\label{class_tetris_a132bbb23f66520e5ec84364892340886}} 
+int {\bfseries get\+Speed} ()
+\begin{DoxyCompactList}\small\item\em получить врямя, за которое смеяются карды \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tetris_af171b28135eb41697fb6b038a27f64e5}\label{class_tetris_af171b28135eb41697fb6b038a27f64e5}} 
+void {\bfseries set\+Speed} (int s)
+\begin{DoxyCompactList}\small\item\em получить счет \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tetris_a99ab0f920df2f3603ea7e0323c9e6ae0}\label{class_tetris_a99ab0f920df2f3603ea7e0323c9e6ae0}} 
+int {\bfseries best\+Score} (int score=0)
+\begin{DoxyCompactList}\small\item\em получить лучший результат \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tetris_aaf0baf002241f57f24addc44e9d03165}\label{class_tetris_aaf0baf002241f57f24addc44e9d03165}} 
+int {\bfseries get\+Box} (int x, int y)
+\begin{DoxyCompactList}\small\item\em статус блока на этой позиции поля, есть или нет \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tetris_acdcc2522d581b4c2aaf94c7418e46c15}\label{class_tetris_acdcc2522d581b4c2aaf94c7418e46c15}} 
+bool {\bfseries rotate} ()
+\begin{DoxyCompactList}\small\item\em повернуть фигуру \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tetris_a6fb6656dac6e3306a9e91d714b3ef2ec}\label{class_tetris_a6fb6656dac6e3306a9e91d714b3ef2ec}} 
+bool {\bfseries move\+To\+Left} ()
+\begin{DoxyCompactList}\small\item\em двинуть влево фигуру \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tetris_a2bcb5e76fb7411c36c7491e9f7559574}\label{class_tetris_a2bcb5e76fb7411c36c7491e9f7559574}} 
+bool {\bfseries move\+To\+Right} ()
+\begin{DoxyCompactList}\small\item\em двинуть вправо фигуру \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tetris_a78f8cb8bedaa24fa27cfc6b096cfa530}\label{class_tetris_a78f8cb8bedaa24fa27cfc6b096cfa530}} 
+bool {\bfseries move\+To\+Bottom} ()
+\begin{DoxyCompactList}\small\item\em двинуть вниз фигуру \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tetris_a74d169c2be7d50c230cb68a29f1df51a}\label{class_tetris_a74d169c2be7d50c230cb68a29f1df51a}} 
+bool {\bfseries is\+End} ()
+\begin{DoxyCompactList}\small\item\em конец игры, фигура коснулась верхней границы поля \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tetris_a6c1a7ddeb8b0696fae32775698e46b30}\label{class_tetris_a6c1a7ddeb8b0696fae32775698e46b30}} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em очистить поле \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tetris_afe47b7ea2bfcb3a69afecb477445007d}\label{class_tetris_afe47b7ea2bfcb3a69afecb477445007d}} 
+static int {\bfseries get\+Width} ()
+\begin{DoxyCompactList}\small\item\em получить ширину окна \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tetris_a5ab59c935e4329efab03f90d94e44114}\label{class_tetris_a5ab59c935e4329efab03f90d94e44114}} 
+static int {\bfseries get\+Height} ()
+\begin{DoxyCompactList}\small\item\em получить высоту окна \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tetris_a309881e04c6d327373964059d672ad2d}\label{class_tetris_a309881e04c6d327373964059d672ad2d}} 
+static int {\bfseries get\+Next\+Width} ()
+\begin{DoxyCompactList}\small\item\em получить ширину окна \char`\"{}далее\char`\"{} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tetris_a4855d62e739d0ace2429c97353d08d66}\label{class_tetris_a4855d62e739d0ace2429c97353d08d66}} 
+static int {\bfseries get\+Next\+Height} ()
+\begin{DoxyCompactList}\small\item\em получить высоту окна \char`\"{}далее\char`\"{} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс с реализованной логикой тетриса. 
+
+В данном классе реализованна логика игры. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{class_tetris_a0216a055ecb3568412c35fc78e52bf14}\label{class_tetris_a0216a055ecb3568412c35fc78e52bf14}} 
+\index{Tetris@{Tetris}!Tetris@{Tetris}}
+\index{Tetris@{Tetris}!Tetris@{Tetris}}
+\doxysubsubsection{\texorpdfstring{Tetris()}{Tetris()}}
+{\footnotesize\ttfamily Tetris\+::\+Tetris (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+конструктор 
+
+Инициализирует генератор случайных чисел.
+
+Заполняет поле нулями.
+
+Заполняет текущий блок минус единицами.
+
+Создает следующий блок.
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_tetris_af1c7655c94f64ca926258b0aed2321bb}\label{class_tetris_af1c7655c94f64ca926258b0aed2321bb}} 
+\index{Tetris@{Tetris}!createBlock@{createBlock}}
+\index{createBlock@{createBlock}!Tetris@{Tetris}}
+\doxysubsubsection{\texorpdfstring{createBlock()}{createBlock()}}
+{\footnotesize\ttfamily void Tetris\+::create\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+создать блок 
+
+Создает блок, копируя следующий 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tetris_8h}{tetris.\+h}}\item 
+\mbox{\hyperlink{tetris_8cpp}{tetris.\+cpp}}\end{DoxyCompactItemize}

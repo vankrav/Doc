@@ -1,0 +1,39 @@
+\hypertarget{nexttetrisbox_8h_source}{}\doxysection{nexttetrisbox.\+h}
+\mbox{\hyperlink{nexttetrisbox_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ NEXTTETRISBOX\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ NEXTTETRISBOX\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QPaintEvent>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QPainter>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QPalette>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QPen>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QBrush>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QColor>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tetris_8h}{tetris.h}}"{}}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ KX\ (MAXX-\/NEXTMAXX)\ /\ 2}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ KY\ 4}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_next_tetris_box}{NextTetrisBox}}\ :\ \textcolor{keyword}{public}\ QWidget\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_next_tetris_box}{NextTetrisBox}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_next_tetris_box_ab867cbd68b748b47fda440ae823e542c}{updateNextTetris}}(\mbox{\hyperlink{class_tetris}{Tetris}}\ tetris);\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_next_tetris_box_aa2e8f9ab6336c9e17b5fb4b5cbb78fa0}{paintEvent}}(QPaintEvent\ *event);\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ signals:}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{struct_block}{Block}}\ nextBlock;}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NEXTTETRISBOX\_H}}
+
+\end{DoxyCode}

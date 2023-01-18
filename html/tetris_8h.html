@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Типовой панельный тетрис: Файл tetris.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="okno5.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Типовой панельный тетрис
+   </div>
+   <div id="projectbrief">Главная игра 2023го года</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#define-members">Макросы</a>  </div>
+  <div class="headertitle"><div class="title">Файл tetris.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Заголовочный файл с описанием логики игры  
+<a href="#details">Подробнее...</a></p>
+<div class="textblock"><code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+</div>
+<p><a href="tetris_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_block.html">Block</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Структура для хранения фигуры  <a href="struct_block.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_tetris.html">Tetris</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Класс с реализованной логикой тетриса.  <a href="class_tetris.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Макросы</h2></td></tr>
+<tr class="memitem:a7bb5845dcf8072f09f0a8d246b47e032"><td class="memItemLeft" align="right" valign="top"><a id="a7bb5845dcf8072f09f0a8d246b47e032" name="a7bb5845dcf8072f09f0a8d246b47e032"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAXX</b>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:a7bb5845dcf8072f09f0a8d246b47e032"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25602e1c79852e5be195490eceff513f"><td class="memItemLeft" align="right" valign="top"><a id="a25602e1c79852e5be195490eceff513f" name="a25602e1c79852e5be195490eceff513f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>MAXY</b>&#160;&#160;&#160;12</td></tr>
+<tr class="separator:a25602e1c79852e5be195490eceff513f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84627572861c86bc97a2657a230024ba"><td class="memItemLeft" align="right" valign="top"><a id="a84627572861c86bc97a2657a230024ba" name="a84627572861c86bc97a2657a230024ba"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NEXTMAXX</b>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:a84627572861c86bc97a2657a230024ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc0bac6432279a95e02e8fcd7c7133dd"><td class="memItemLeft" align="right" valign="top"><a id="abc0bac6432279a95e02e8fcd7c7133dd" name="abc0bac6432279a95e02e8fcd7c7133dd"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NEXTMAXY</b>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:abc0bac6432279a95e02e8fcd7c7133dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a241aeeb764887ae5e3de58b98f04b16d"><td class="memItemLeft" align="right" valign="top"><a id="a241aeeb764887ae5e3de58b98f04b16d" name="a241aeeb764887ae5e3de58b98f04b16d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WIDTH</b>&#160;&#160;&#160;50</td></tr>
+<tr class="separator:a241aeeb764887ae5e3de58b98f04b16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed89bd71aee8be823e8a20ec4e093c1e"><td class="memItemLeft" align="right" valign="top"><a id="aed89bd71aee8be823e8a20ec4e093c1e" name="aed89bd71aee8be823e8a20ec4e093c1e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>HEIGHT</b>&#160;&#160;&#160;50</td></tr>
+<tr class="separator:aed89bd71aee8be823e8a20ec4e093c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0077c92efe16cc4dfbe02bb6dcc2771"><td class="memItemLeft" align="right" valign="top"><a id="aa0077c92efe16cc4dfbe02bb6dcc2771" name="aa0077c92efe16cc4dfbe02bb6dcc2771"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NEXTWIDTH</b>&#160;&#160;&#160;30</td></tr>
+<tr class="separator:aa0077c92efe16cc4dfbe02bb6dcc2771"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af63fbc107fc7b8eb4ff30e1450ac70d5"><td class="memItemLeft" align="right" valign="top"><a id="af63fbc107fc7b8eb4ff30e1450ac70d5" name="af63fbc107fc7b8eb4ff30e1450ac70d5"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NEXTHEIGHT</b>&#160;&#160;&#160;30</td></tr>
+<tr class="separator:af63fbc107fc7b8eb4ff30e1450ac70d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab39fec97d85960796efedec442f38004"><td class="memItemLeft" align="right" valign="top"><a id="ab39fec97d85960796efedec442f38004" name="ab39fec97d85960796efedec442f38004"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>INTERVAL</b>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ab39fec97d85960796efedec442f38004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a698c124f1c293f98840449d6c5b9d984"><td class="memItemLeft" align="right" valign="top"><a id="a698c124f1c293f98840449d6c5b9d984" name="a698c124f1c293f98840449d6c5b9d984"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>COUNT</b>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:a698c124f1c293f98840449d6c5b9d984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5257bffe4714645f0a391fa4926d01af"><td class="memItemLeft" align="right" valign="top"><a id="a5257bffe4714645f0a391fa4926d01af" name="a5257bffe4714645f0a391fa4926d01af"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PATH_TO_WALL</b>&#160;&#160;&#160;&quot;:/src/img/okno/okno&quot;</td></tr>
+<tr class="separator:a5257bffe4714645f0a391fa4926d01af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d860c39b64a37772936563f39353a83"><td class="memItemLeft" align="right" valign="top"><a id="a1d860c39b64a37772936563f39353a83" name="a1d860c39b64a37772936563f39353a83"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PATH_TO_SKY_IMG</b>&#160;&#160;&#160;&quot;:/src/img/sky/sky.jpg&quot;</td></tr>
+<tr class="separator:a1d860c39b64a37772936563f39353a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e03eed5c8eae13c744905c61938944d"><td class="memItemLeft" align="right" valign="top"><a id="a4e03eed5c8eae13c744905c61938944d" name="a4e03eed5c8eae13c744905c61938944d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PATH_TO_BOMB_IMG</b>&#160;&#160;&#160;&quot;:/src/img/bomb/bomb.png&quot;</td></tr>
+<tr class="separator:a4e03eed5c8eae13c744905c61938944d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac3553b3932cbfeeac4526ce7ca0336b"><td class="memItemLeft" align="right" valign="top"><a id="aac3553b3932cbfeeac4526ce7ca0336b" name="aac3553b3932cbfeeac4526ce7ca0336b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SPEED</b>&#160;&#160;&#160;500</td></tr>
+<tr class="separator:aac3553b3932cbfeeac4526ce7ca0336b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Заголовочный файл с описанием логики игры </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>
